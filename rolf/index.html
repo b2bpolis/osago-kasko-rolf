@@ -1,33 +1,18 @@
-# Подлкючение двух калькуляторов одновременно
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-Подключение двух калькуляторов отличается тем, что для них есть общие файлы, которые дублировать не надо.
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/icon.min.css"/>
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="https://qostya.github.io/atomic-emmet/dist/style.css">
 
+    <title>Калькулятор</title>
+</head>
+<body>
 
-## Подключение стилей
-
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/icon.min.css"/>
-<link rel="stylesheet" href="./dist/css/style.css">
-<link rel="stylesheet" href="https://qostya.github.io/atomic-emmet/dist/style.css">
-```
-
-## Подключение скриптов
-
-Внизу, до закрывающего тега `<body>` необходимо подключить следующие скрипты:
-
-```html
-<script charset="utf-8" src="./config.js"></script>
-<script charset="utf-8" src="../common/vendors.min.js"></script>
-<script charset="utf-8" src="./dist/js/app.min.js"></script>
-```
-
-## Разметка
-
-Пример разметки для вывода калькулятора:
-
-Вызывающая калькулятор иконка справа:
-
-```html
 <div class="c-calc-panel">
     <a href="#/pre" class="c-calc-panel__item js-show-choosing-calc">
         <div class="c-calc-panel__item-icon">
@@ -39,10 +24,6 @@
     </a>
 </div>
 
-```
-
-
-```html
 <div class="b-app-modal b-app-modal--is-hidden">
     <div class="b-app-modal__bg js-app-modal-close"></div>
 
@@ -93,10 +74,10 @@
         </div>
     </div>
 </div>
-```
 
-Рабочий пример можно посмотреть здесь: `rolf/index.html`
+<script charset="utf-8" src="./config.js"></script>
+<script charset="utf-8" src="../common/vendors.min.js"></script>
+<script charset="utf-8" src="./dist/js/app.min.js"></script>
 
-[Назад][bede57fb]
-
-  [bede57fb]: readme.md "Назад"
+</body>
+</html>

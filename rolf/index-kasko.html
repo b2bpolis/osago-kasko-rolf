@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/icon.min.css"/>
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./dist/css/fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" href="https://qostya.github.io/atomic-emmet/dist/style.css">
+
+    <title>Калькулятор КАСКО</title>
+</head>
+<body>
+
+<div id="KaskoApp">
+    <div class="b-app" ui-view ng-class="'b-app--' + currentBrandName"></div>
+</div>
+
+<script charset="utf-8" src="./config.js"></script>
+<script charset="utf-8" src="../common/vendors.min.js"></script>
+<script charset="utf-8" src="./dist/js/app.min.js"></script>
+
+<script type="text/javascript">
+  (function () {
+    window.location.hash = '#!/kasko/';
+    angular.bootstrap(document.getElementById('KaskoApp'), ['KaskoApp']);
+  }());
+</script>
+
+</body>
+</html>
